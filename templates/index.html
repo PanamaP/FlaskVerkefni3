@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bensínstöðvar</title>
+</head>
+<body>
+    <P>ÓDÝRASTA VERÐIÐ</P>
+    <P>Bensín : {{ min_bensin_stadur[0]}} <br>
+        Staðsetning: <a href="/stadur/{{min_bensin_stadur[1]}}">{{min_bensin_stadur[1]}}</a></P>
+
+    <p>Diesel : {{ min_diesel_stadur[0] }} <br>
+       Staðsetning: <a href="/stadur/{{ min_diesel_stadur[1] }}">{{ min_diesel_stadur[1] }}</a></p>
+
+    {% for i in bensinstodvar %}
+        {% if i in mynd: %}
+          <li><img src="static/images/{{ mynd[i] }}" width="90" height="60"/> <a href="/stadur/{{ i }}"> {{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    
+</body>
+</html>
