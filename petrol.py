@@ -9,11 +9,11 @@ app = Flask(__name__)
 with urllib.request.urlopen("https://apis.is/petrol") as url:
     data = json.loads(url.read().decode())
 
-app.jinja_env.add_extension(ext.do)
+#app.jinja_env.add_extension(ext.do)
 
 def format_time(gogn):
     return datetime.strptime(gogn, '%Y-%m-%dT%H:%M:%S.%f').strftime('%d. %m. %Y Kl. %H:%M')
-app.jinja_env.filters['format_time'] = format_time
+#app.jinja_env.filters['format_time'] = format_time
 
 bensinstodvar = []
 myndir = {'Atlantsolía': 'atlantsolia.png', 'Costco Iceland': 'costco.png', 'Dælan':'daelan.png',
