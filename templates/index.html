@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bensínstöðvar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
+    <a href="/">Forsíða</a>
+    <div>
+
+    <div class="verd">
     <P>ÓDÝRASTA VERÐIÐ</P>
+    <p>Last Checked: {{ timi }}</p>
     <P>Bensín : {{ min_bensin_stadur[0]}} <br>
-        Staðsetning: <a href="/stadur/{{min_bensin_stadur[1]}}">{{min_bensin_stadur[1]}}</a></P>
+        Staðsetning: <a href="/stadur/{{ min_bensin_stadur[1] }}/{{ min_bensin_stadur[2] }}">{{min_bensin_stadur[1]}}</a>, {{ min_bensin_stadur[2]}}</P>
 
     <p>Diesel : {{ min_diesel_stadur[0] }} <br>
-       Staðsetning: <a href="/stadur/{{ min_diesel_stadur[1] }}">{{ min_diesel_stadur[1] }}</a></p>
-
+       Staðsetning: <a href="/stadur/{{ min_diesel_stadur[1] }}/{{ min_diesel_stadur[2]}}">{{ min_diesel_stadur[1] }}</a>, {{ min_diesel_stadur[2]}}</p>
+    </div>
     {% for i in bensinstodvar %}
-        {% if i in mynd: %}
-          <li><img src="static/images/{{ mynd[i] }}" width="90" height="60"/> <a href="/stadur/{{ i }}"> {{ i }}</a></li>
+       {% if i in mynd: %}
+       <div class="litur"> <li><img src="static/images/{{ mynd[i] }}" width="90" height="60"/> <a href="/stadur/{{ i }}"> {{ i }}</a></li></div>
       {% endif %}
-    {% endfor %}
     
+    {% endfor %}
 </body>
 </html>

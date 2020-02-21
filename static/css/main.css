@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  padding-top: 1em;
+  margin: 0px auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background: whitesmoke;
+}
+.litur{
+  background-color: greenyellow;
+  text-align: left;
+  padding: 10px;
+  width: 13em;
+}
+.verd{
+  background-color: yellow;
+}
+ul {
+  text-align: center;
+  }
+  
+li {
+  display: inline-block;
+}
+.vinstri{
+  float: left;
+}
+.haegri{
+  float: right;
+}
