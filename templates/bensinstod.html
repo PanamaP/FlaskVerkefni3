@@ -1,3 +1,5 @@
+{% extends 'base.html'%}
+{% block container%}
 <h1> {{ stod }} </h1>
 <h2> {{ bensinstod }} </h2>
 <p>Bensín verð: {{ verd_bensin }}</p>
@@ -8,3 +10,4 @@
 
 <br>
 <a href="https://www.google.com/maps/@{{ lat }},{{ lon }},16z">Staðsetning</a>
+{% endblock %}

@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bensínstöðvar</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-</head>
-<body>
-    <a href="/">Forsíða</a>
-    <div>
+{% extends 'base.html' %}
 
-    <div class="verd">
+{% block container %}
+<div class="verd">
     <P>ÓDÝRASTA VERÐIÐ</P>
     <p>Last Checked: {{ timi }}</p>
     <P>Bensín : {{ min_bensin_stadur[0]}} <br>
@@ -26,5 +16,4 @@
       {% endif %}
     
     {% endfor %}
-</body>
-</html>
+{% endblock %}

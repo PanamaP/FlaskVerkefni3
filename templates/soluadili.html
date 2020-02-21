@@ -1,5 +1,17 @@
-<h1>{{ stod }}</h1>
-<h3> Staðsetningar </h3>
-{% for i in stadsetningar %}
-    <li> <a href="/stadur/{{ stod }}/{{ i }}">{{ i }}</a> </li>
-{% endfor %}
+{% extends 'base.html' %}
+{% block container %}
+    <h1>{{ stod }}</h1>
+    <h3> Staðsetningar </h3>
+    <table>
+        <tr>
+            <th>Staður</th>
+        </tr>
+    {% for i in stadsetningar %}
+    <tr>
+    <td>
+        <li> <a style='text-decoration:none;' href="/stadur/{{ stod }}/{{ i }}">{{ i }}</a> </li>
+    </td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
