@@ -2,33 +2,9 @@ body {
   text-align: center;
   padding-left: 25%;
   padding-right: 25%;
-  padding-top: 1em;
-  margin: 0px auto;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
   background: whitesmoke;
-}
-.litur{
-  background-color: greenyellow;
-  text-align: left;
-  padding: 10px;
-  width: 13em;
-}
-.verd{
-  background-color: yellow;
-}
-ul {
-  text-align: center;
-  }
-  
-li {
-  display: inline-block;
-}
-.vinstri{
-  float: left;
-}
-.haegri{
-  float: right;
 }
 table {
   font-family: arial, sans-serif;
@@ -44,4 +20,43 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+li{
+  list-style: none;
+}
+.wrapper{
+  padding: 25px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 3fr));
+  grid-gap: 20px;
+  align-items: center;
+}
+.item{
+  padding: 10px;
+  color: white;
+  border-radius: 90px;
+  border: white 1px solid;
+}
+.menu{
+  padding: 10px;
+  text-decoration: none;
+  background-color: darkblue;
+  color: white;
+}
+.verd{
+  padding: 25px; 
+  background-color: lightblue;
+  border-bottom: solid 5px whitesmoke;
+  border-top: solid 5px whitesmoke;
+}
+.wrapper img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: blue
 }

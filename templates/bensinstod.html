@@ -2,12 +2,13 @@
 {% block container%}
 <h1> {{ stod }} </h1>
 <h2> {{ bensinstod }} </h2>
+
 <p>Bensín verð: {{ verd_bensin }}</p>
 
 <p>Dísel verð: {{ verd_diesel }}</p>
-{{ lat }}
-{{ lon }}
 
-<br>
-<a href="https://www.google.com/maps/@{{ lat }},{{ lon }},16z">Staðsetning</a>
+
+
+>> <a style=text-decoration:none; href="https://www.google.com/maps/@{{ lat }},{{ lon }},16z">Staðsetning</a> <<
+<hr style='width:12em'>
 {% endblock %}

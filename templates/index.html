@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
 
 {% block container %}
-<div class="verd">
+<div style="background-color: lightblue;">  
+    <div class="verd">
     <P>ÓDÝRASTA VERÐIÐ</P>
-    <p>Last Checked: {{ timi }}</p>
-    <P>Bensín : {{ min_bensin_stadur[0]}} <br>
+    <p>Seinast uppfært: {{ timi }}</p>
+    <P>Bensín : {{ min_bensin_stadur[0]}} ISK <br>
         Staðsetning: <a href="/stadur/{{ min_bensin_stadur[1] }}/{{ min_bensin_stadur[2] }}">{{min_bensin_stadur[1]}}</a>, {{ min_bensin_stadur[2]}}</P>
-
-    <p>Diesel : {{ min_diesel_stadur[0] }} <br>
+    <p>Diesel : {{ min_diesel_stadur[0] }} ISK<br>
        Staðsetning: <a href="/stadur/{{ min_diesel_stadur[1] }}/{{ min_diesel_stadur[2]}}">{{ min_diesel_stadur[1] }}</a>, {{ min_diesel_stadur[2]}}</p>
     </div>
+    <div class="wrapper">
     {% for i in bensinstodvar %}
        {% if i in mynd: %}
-       <div class="litur"> <li><img src="static/images/{{ mynd[i] }}" width="90" height="60"/> <a href="/stadur/{{ i }}"> {{ i }}</a></li></div>
+       <div class="item"><li><a href="/stadur/{{ i }}"><img src="static/images/{{ mynd[i] }}" width="90" height="60"/></a></li></div>
       {% endif %}
-    
     {% endfor %}
+    </div>
+</div>
 {% endblock %}

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
-    <a href="/">Forsíða</a>
+    <div class="menu">
+    <a style=text-decoration:none;color:white; href="/">Forsíða</a>
+    </div>
     {% block container %}
     {% endblock%}
 </body>
